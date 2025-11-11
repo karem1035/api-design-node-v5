@@ -18,7 +18,7 @@ if (isProd()) {
   client = remember('dbPool', () => createPool())
 }
 
-export const db = drizzle({ drizzle, schema })
+export const db = drizzle(client, { schema })
 
 export default db
 // what is a singleton
